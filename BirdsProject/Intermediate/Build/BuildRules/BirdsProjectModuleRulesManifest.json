@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"D:\\Unreal Projects\\BirdsProject\\BirdsProject\\Source\\BirdsProject\\BirdsProject.Build.cs",
+		"D:\\Unreal Projects\\BirdsProject\\BirdsProject\\Source\\BirdsProject.Target.cs",
+		"D:\\Unreal Projects\\BirdsProject\\BirdsProject\\Source\\BirdsProjectEditor.Target.cs"
+	],
+	"EngineVersion": "5.3.2"
+}

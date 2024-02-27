@@ -1,0 +1,14 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\unreal projects\\birdsproject\\birdsproject\\source\\birdsproject\\private\\birdsenums.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\unreal projects\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\birdsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "d:\\unreal projects\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\birdsproject\\definitions.birdsproject.h",
+            "d:\\unreal projects\\birdsproject\\birdsproject\\source\\birdsproject\\public\\birdsenums.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
