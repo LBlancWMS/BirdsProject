@@ -30,3 +30,35 @@ D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjec
 D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.dll
 D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\refint\BirdsProjectModuleRules.dll
 D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\BirdsProjectModuleRules.deps.json
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\BirdsProjectModuleRules.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\ref\BirdsProjectModuleRules.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\BirdsProjectModuleRules.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Box.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Core.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Horde.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.IoHash.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.MsBuild.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.OIDC.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Serialization.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.UHT.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Box.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Box.xml
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Core.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Horde.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Horde.xml
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.IoHash.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.MsBuild.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.OIDC.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.Serialization.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.UHT.pdb
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\bin\Development\EpicGames.UHT.xml
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.csproj.AssemblyReference.cache
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.AssemblyInfoInputs.cache
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.AssemblyInfo.cs
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.csproj.CoreCompileInputs.cache
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.csproj.CopyComplete
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\refint\BirdsProjectModuleRules.dll
+C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\BuildRulesProjects\BirdsProjectModuleRules\obj\Development\BirdsProjectModuleRules.pdb

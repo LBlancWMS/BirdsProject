@@ -11,6 +11,8 @@
     <None Include="..\..\Source\BirdsProjectEditor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.gitignore" />
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -44,10 +46,16 @@
     <ClCompile Include="..\..\Source\BirdsProject\Private\BirdsEnums.cpp">
       <Filter>Source\BirdsProject\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\BirdsProject\Private\CPPTRANSITIONTODELETE.cpp">
+      <Filter>Source\BirdsProject\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\BirdsProject\Public">
       <UniqueIdentifier>{9C07791C-BE15-3A44-954F-7635B0C28CF9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\BirdsProject\Public\BirdsEnums.h">
+      <Filter>Source\BirdsProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BirdsProject\Public\CPPTRANSITIONTODELETE.h">
       <Filter>Source\BirdsProject\Public</Filter>
     </ClInclude>
   </ItemGroup>

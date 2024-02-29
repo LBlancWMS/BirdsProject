@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ks9+DJ4CC/xLxpt/2UrnwYnsAZge/8ZPQ8l3PwHwN+DysZ8nzl5yzaB0S/ABKbyQGWIh65XQ+AMITdA4I6iRsw==",
+  "dgSpecHash": "z6qjyJCqNskhTfNs1jBSWbacf2mjlRhuH9LkHmkUniZKHIlKRszxi/y+UgTe+AfxVzBVHi3fUfw9kTmaoWVVqw==",
   "success": true,
-  "projectFilePath": "D:\\Unreal Projects\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\BirdsProjectModuleRules.csproj",
+  "projectFilePath": "C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\BirdsProjectModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucas\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",
     "C:\\Users\\lucas\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
