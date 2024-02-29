@@ -6,8 +6,8 @@
 /NAME:"UnrealEditor-BirdsProject.dll"
 /IGNORE:4221
 /NODEFAULTLIB
-"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.obj"
-"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.cpp.obj"
-"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsEnums.cpp.obj"
-"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\Default.rc2.res"
-/OUT:"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\UnrealEditor-BirdsProject.lib"
+"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.obj"
+"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.cpp.obj"
+"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsEnums.cpp.obj"
+"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\Default.rc2.res"
+/OUT:"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\UnrealEditor-BirdsProject.lib"

@@ -1,11 +1,11 @@
-"D:\Unreal Projects\BirdsProject\BirdsProject\Source\BirdsProject\Private\BirdsEnums.cpp"
-/FI"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
-/FI"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\Definitions.BirdsProject.h"
-/Yu"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
-/Fp"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.pch"
-/Fo"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsEnums.cpp.obj"
-/sourceDependencies "D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsEnums.cpp.dep.json"
-@"D:\Unreal Projects\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.Shared.rsp"
+"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Source\BirdsProject\Private\BirdsEnums.cpp"
+/FI"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
+/FI"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\Definitions.BirdsProject.h"
+/Yu"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
+/Fp"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.pch"
+/Fo"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsEnums.cpp.obj"
+/sourceDependencies "C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsEnums.cpp.dep.json"
+@"C:\Users\lucas\Documents\GitHub\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
