@@ -43,19 +43,13 @@
     <Filter Include="Source\BirdsProject\Private">
       <UniqueIdentifier>{F9183BCD-D0FF-3C30-A6CA-DE4999D03ECA}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\BirdsProject\Private\BirdsEnums.cpp">
-      <Filter>Source\BirdsProject\Private</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\Source\BirdsProject\Private\CPPTRANSITIONTODELETE.cpp">
+    <ClCompile Include="..\..\Source\BirdsProject\Private\FlockingBoid.cpp">
       <Filter>Source\BirdsProject\Private</Filter>
     </ClCompile>
     <Filter Include="Source\BirdsProject\Public">
       <UniqueIdentifier>{9C07791C-BE15-3A44-954F-7635B0C28CF9}</UniqueIdentifier>
     </Filter>
-    <ClInclude Include="..\..\Source\BirdsProject\Public\BirdsEnums.h">
-      <Filter>Source\BirdsProject\Public</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\BirdsProject\Public\CPPTRANSITIONTODELETE.h">
+    <ClInclude Include="..\..\Source\BirdsProject\Public\FlockingBoid.h">
       <Filter>Source\BirdsProject\Public</Filter>
     </ClInclude>
   </ItemGroup>

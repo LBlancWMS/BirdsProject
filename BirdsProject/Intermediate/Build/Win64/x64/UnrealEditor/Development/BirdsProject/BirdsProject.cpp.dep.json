@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.cpp",
+        "Source": "d:\\gits\\birdsproject\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.cpp",
         "ProvidedModule": "",
-        "PCH": "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\birdsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\gits\\birdsproject\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\birdsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
         "Includes": [
-            "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\birdsproject\\definitions.birdsproject.h",
-            "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.h"
+            "d:\\gits\\birdsproject\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\birdsproject\\definitions.birdsproject.h",
+            "d:\\gits\\birdsproject\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
