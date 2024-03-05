@@ -112,10 +112,23 @@ void UQuaternionInput::AddActorLocalRotationQuat(AActor* Actor, const FQuat& Del
 
 void UQuaternionInput::ClampRotation()
 {
-    FRotator BirdRotation = GetOwner()->GetActorRotation();
+    //FRotator BirdRotation = GetOwner()->GetActorRotation();
 
-    float Pitch = FMath::Clamp(BirdRotation.Pitch, -90, 90);
-    float Yaw = FMath::Clamp(BirdRotation.Yaw, -90, 90);
+    //float Pitch = FMath::Clamp(BirdRotation.Pitch, -90, 90);
+    //float Roll = FMath::Clamp(BirdRotation.Roll, -90, 90);
 
-    //BirdRotation = 
+    //BirdRotation = FRotator(BirdRotation.Pitch, BirdRotation.Yaw, Roll);
+
+    //GetOwner()->SetActorRotation(BirdRotation);
+
+    FQuat BirdRotationQuat = GetOwner()->GetActorQuat();
+    FRotator BirdRotation = BirdRotationQuat.Rotator();
+
+    float ClampedPitch = FMath::Clamp(BirdRotation.Pitch, -90.0f, 90.0f);
+    float ClampedRoll = FMath::Clamp(BirdRotation.Roll, -90.0f, 90.0f);
+
+    FRotator ClampedRotator(BirdRotation.Pitch, BirdRotation.Yaw, ClampedRoll);
+    FQuat ClampedQuat = FQuat(ClampedRotator);
+
+    GetOwner()->SetActorRotation(ClampedQuat);
 }

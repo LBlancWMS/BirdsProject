@@ -44,6 +44,7 @@ public:
     UFUNCTION(BlueprintCallable, meta = (DisplayName = "Add Actor Local Rotation (Quaternion)", Keywords = "rotation, quaternion"), Category = "Quaternion Rotation")
     static void AddActorLocalRotationQuat(AActor* Actor, const FQuat& Delta_Rotation);
 
+    UFUNCTION(BlueprintCallable, Category = "Quaternion Rotation")
     void ClampRotation();
 
 protected:
