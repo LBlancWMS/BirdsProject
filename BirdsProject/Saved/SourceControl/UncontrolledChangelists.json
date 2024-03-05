@@ -5,6 +5,8 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
+				"C:/Users/Anais/Documents/Quetes/B2-Quete7/BirdsProject/BirdsProject/Content/Blueprints/PC_flyingBird.uasset",
+				"C:/Users/Anais/Documents/Quetes/B2-Quete7/BirdsProject/BirdsProject/Content/Blueprints/C_Bird.uasset",
 				"C:/Users/lucas/Documents/GitHub/BirdsProject/BirdsProject/Content/Blueprints/PC_flyingBird.uasset",
 				"C:/Users/lucas/Documents/GitHub/BirdsProject/BirdsProject/Content/Assets/Materials/WireframeMaterial.uasset"
 			]

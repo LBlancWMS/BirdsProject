@@ -44,16 +44,14 @@ public:
     UFUNCTION(BlueprintCallable, meta = (DisplayName = "Add Actor Local Rotation (Quaternion)", Keywords = "rotation, quaternion"), Category = "Quaternion Rotation")
     static void AddActorLocalRotationQuat(AActor* Actor, const FQuat& Delta_Rotation);
 
+    void ClampRotation();
+
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-
-	FQuat _currentQuatRot;
-	FVector _currentDirection;
 
 public:	
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
-	void MoveAround(float x, float y);
 };

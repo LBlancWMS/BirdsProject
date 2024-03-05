@@ -109,3 +109,13 @@ void UQuaternionInput::AddActorLocalRotationQuat(AActor* Actor, const FQuat& Del
         Actor->AddActorLocalRotation(Delta_Rotation);
     }
 }
+
+void UQuaternionInput::ClampRotation()
+{
+    FRotator BirdRotation = GetOwner()->GetActorRotation();
+
+    float Pitch = FMath::Clamp(BirdRotation.Pitch, -90, 90);
+    float Yaw = FMath::Clamp(BirdRotation.Yaw, -90, 90);
+
+    //BirdRotation = 
+}
