@@ -1,14 +1,8 @@
 {
 	"SourceFiles": [
-<<<<<<< HEAD
 		"C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Source\\BirdsProject\\BirdsProject.Build.cs",
 		"C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Source\\BirdsProject.Target.cs",
 		"C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Source\\BirdsProjectEditor.Target.cs"
-=======
-		"C:\\Users\\Anais\\Documents\\Quetes\\B2-Quete7\\BirdsProject\\BirdsProject\\Source\\BirdsProject\\BirdsProject.Build.cs",
-		"C:\\Users\\Anais\\Documents\\Quetes\\B2-Quete7\\BirdsProject\\BirdsProject\\Source\\BirdsProject.Target.cs",
-		"C:\\Users\\Anais\\Documents\\Quetes\\B2-Quete7\\BirdsProject\\BirdsProject\\Source\\BirdsProjectEditor.Target.cs"
->>>>>>> origin/QuaternionControls
 	],
 	"EngineVersion": "5.3.2"
 }

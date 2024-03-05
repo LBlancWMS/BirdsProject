@@ -1,21 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-<<<<<<< HEAD
         "Source": "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.cpp",
         "ProvidedModule": "",
         "PCH": "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\birdsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
         "Includes": [
             "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\birdsproject\\definitions.birdsproject.h",
             "c:\\users\\lucas\\documents\\github\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.h"
-=======
-        "Source": "c:\\users\\anais\\documents\\quetes\\b2-quete7\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.cpp",
-        "ProvidedModule": "",
-        "PCH": "c:\\users\\anais\\documents\\quetes\\b2-quete7\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\birdsprojecteditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
-        "Includes": [
-            "c:\\users\\anais\\documents\\quetes\\b2-quete7\\birdsproject\\birdsproject\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\birdsproject\\definitions.birdsproject.h",
-            "c:\\users\\anais\\documents\\quetes\\b2-quete7\\birdsproject\\birdsproject\\source\\birdsproject\\birdsproject.h"
->>>>>>> origin/QuaternionControls
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []
