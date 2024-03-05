@@ -46,10 +46,16 @@
     <ClCompile Include="..\..\Source\BirdsProject\Private\FlockingBoid.cpp">
       <Filter>Source\BirdsProject\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\BirdsProject\Private\QuaternionInput.cpp">
+      <Filter>Source\BirdsProject\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\BirdsProject\Public">
       <UniqueIdentifier>{9C07791C-BE15-3A44-954F-7635B0C28CF9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\BirdsProject\Public\FlockingBoid.h">
+      <Filter>Source\BirdsProject\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\BirdsProject\Public\QuaternionInput.h">
       <Filter>Source\BirdsProject\Public</Filter>
     </ClInclude>
   </ItemGroup>

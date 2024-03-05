@@ -1,11 +1,11 @@
-"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Source\BirdsProject\BirdsProject.cpp"
-/FI"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
-/FI"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\Definitions.BirdsProject.h"
-/Yu"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
-/Fp"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.pch"
-/Fo"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.cpp.obj"
-/sourceDependencies "D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.cpp.dep.json"
-@"D:\Gits\BirdsProject\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.Shared.rsp"
+"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Source\BirdsProject\BirdsProject.cpp"
+/FI"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
+/FI"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\Definitions.BirdsProject.h"
+/Yu"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h"
+/Fp"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\BirdsProjectEditor\Development\Engine\SharedPCH.Engine.Cpp20.InclOrderUnreal5_0.h.pch"
+/Fo"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.cpp.obj"
+/sourceDependencies "C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.cpp.dep.json"
+@"C:\Users\Anais\Documents\Quetes\B2-Quete7\BirdsProject\BirdsProject\Intermediate\Build\Win64\x64\UnrealEditor\Development\BirdsProject\BirdsProject.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi
