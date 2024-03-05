@@ -7990,6 +7990,7 @@
     },
     "EpicGames.Box/1.0.0": {
       "type": "project",
+<<<<<<< HEAD
       "path": "../../../../../../../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Box/EpicGames.Box.csproj",
       "msbuildProject": "../../../../../../../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Box/EpicGames.Box.csproj"
     },
@@ -8052,6 +8053,70 @@
       "type": "project",
       "path": "../../../../../../../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
       "msbuildProject": "../../../../../../../../../../Program Files/Epic Games/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
+=======
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Box/EpicGames.Box.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Box/EpicGames.Box.csproj"
+    },
+    "EpicGames.Build/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Build/EpicGames.Build.csproj"
+    },
+    "EpicGames.Core/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Core/EpicGames.Core.csproj"
+    },
+    "EpicGames.Horde/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Horde/EpicGames.Horde.csproj"
+    },
+    "EpicGames.IoHash/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.IoHash/EpicGames.IoHash.csproj"
+    },
+    "EpicGames.MsBuild/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.MsBuild/EpicGames.MsBuild.csproj"
+    },
+    "EpicGames.OIDC/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.OIDC/EpicGames.OIDC.csproj"
+    },
+    "EpicGames.Serialization/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.Serialization/EpicGames.Serialization.csproj"
+    },
+    "EpicGames.UHT/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/Shared/EpicGames.UHT/EpicGames.UHT.csproj"
+    },
+    "MarketplaceRules/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Intermediate/Build/BuildRulesProjects/MarketplaceRules/MarketplaceRules.csproj"
+    },
+    "UE5ProgramRules/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Intermediate/Build/BuildRulesProjects/UE5ProgramRules/UE5ProgramRules.csproj"
+    },
+    "UE5Rules/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Intermediate/Build/BuildRulesProjects/UE5Rules/UE5Rules.csproj"
+    },
+    "UnrealBuildTool/1.0.0": {
+      "type": "project",
+      "path": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj",
+      "msbuildProject": "../../../../../../../../../../../Program Files (x86)/UE_5.3/Engine/Source/Programs/UnrealBuildTool/UnrealBuildTool.csproj"
+>>>>>>> origin/QuaternionControls
     }
   },
   "projectFileDependencyGroups": {
@@ -8064,23 +8129,35 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\lucas\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\Anais\\.nuget\\packages\\": {},
+>>>>>>> origin/QuaternionControls
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\BirdsProjectModuleRules.csproj",
       "projectName": "BirdsProjectModuleRules",
       "projectPath": "C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\BirdsProjectModuleRules.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lucas\\Documents\\GitHub\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Anais\\Documents\\Quetes\\B2-Quete7\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\BirdsProjectModuleRules.csproj",
+      "projectName": "BirdsProjectModuleRules",
+      "projectPath": "C:\\Users\\Anais\\Documents\\Quetes\\B2-Quete7\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\BirdsProjectModuleRules.csproj",
+      "packagesPath": "C:\\Users\\Anais\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Anais\\Documents\\Quetes\\B2-Quete7\\BirdsProject\\BirdsProject\\Intermediate\\Build\\BuildRulesProjects\\BirdsProjectModuleRules\\obj\\",
+>>>>>>> origin/QuaternionControls
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Anais\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8096,6 +8173,7 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj": {
               "projectPath": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj"
             },
@@ -8110,6 +8188,22 @@
             },
             "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj": {
               "projectPath": "C:\\Program Files\\Epic Games\\UE_5.3\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj"
+=======
+            "C:\\Program Files (x86)\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj": {
+              "projectPath": "C:\\Program Files (x86)\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\MarketplaceRules\\MarketplaceRules.csproj"
+            },
+            "C:\\Program Files (x86)\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj": {
+              "projectPath": "C:\\Program Files (x86)\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5ProgramRules\\UE5ProgramRules.csproj"
+            },
+            "C:\\Program Files (x86)\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\UE5Rules.csproj": {
+              "projectPath": "C:\\Program Files (x86)\\UE_5.3\\Engine\\Intermediate\\Build\\BuildRulesProjects\\UE5Rules\\UE5Rules.csproj"
+            },
+            "C:\\Program Files (x86)\\UE_5.3\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj": {
+              "projectPath": "C:\\Program Files (x86)\\UE_5.3\\Engine\\Source\\Programs\\Shared\\EpicGames.Build\\EpicGames.Build.csproj"
+            },
+            "C:\\Program Files (x86)\\UE_5.3\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj": {
+              "projectPath": "C:\\Program Files (x86)\\UE_5.3\\Engine\\Source\\Programs\\UnrealBuildTool\\UnrealBuildTool.csproj"
+>>>>>>> origin/QuaternionControls
             }
           }
         }
@@ -8139,7 +8233,11 @@
             "privateAssets": "all"
           }
         },
+<<<<<<< HEAD
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+=======
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+>>>>>>> origin/QuaternionControls
       }
     }
   }
