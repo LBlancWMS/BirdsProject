@@ -16,7 +16,7 @@ public:
     UFlockingBoid();
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
-        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers);
+        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers, float flockDelay, float flockOffset);
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
         void Flock(float DeltaTime);
@@ -28,6 +28,8 @@ private:
     float _rowDistance;
     float _rowSpacing;
     float _verticalSpacing;
+    float _flockDelay;
+    float _flockOffset;
     TArray<AActor*> _flockMembers;
     class USkeletalMeshComponent* _skeletalMeshComponent;
     UFloatingPawnMovement* _movementComponent;

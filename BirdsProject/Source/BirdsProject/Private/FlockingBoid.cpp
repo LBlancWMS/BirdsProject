@@ -7,13 +7,15 @@ UFlockingBoid::UFlockingBoid()
     _isFlocking = false;
 }
 
-void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers)
+void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers, float flockDelay, float flockOffset)
 {
     _leader = leader;
     _rowDistance = rowDistance;
     _rowSpacing = rowSpacing;
     _verticalSpacing = verticalSpacing;
     _flockMembers = flockMembers;
+    _flockDelay = flockDelay;
+    _flockOffset = flockOffset;
     _skeletalMeshComponent = GetOwner()->FindComponentByClass<USkeletalMeshComponent>();
     _movementComponent = GetOwner()->FindComponentByClass<UFloatingPawnMovement>();
     _isFlocking = true;
@@ -29,31 +31,31 @@ void UFlockingBoid::Flock(float DeltaTime)
 
         if (GetOwner() == _leader)
         {
-            FRotator CurrentRotation = _skeletalMeshComponent->GetComponentRotation();
-            FRotator RandomRotation = FRotator(FMath::FRandRange(-90.0f, 90.0f), FMath::FRandRange(-90.0f, 90.0f), 0.0f);
-            FRotator NewRotation = FMath::RInterpTo(CurrentRotation, CurrentRotation + RandomRotation, DeltaTime, 2.0f);
-            _skeletalMeshComponent->SetWorldRotation(NewRotation);
+                FRotator CurrentRotation = GetOwner()->GetActorRotation();
+                FRotator RandomRotation = FRotator(FMath::FRandRange(-90.0f, 90.0f), FMath::FRandRange(-90.0f, 90.0f), FMath::FRandRange(-90.0f, 90.0f));
+                FRotator NewRotation = FMath::RInterpTo(CurrentRotation, CurrentRotation + RandomRotation, DeltaTime, 2.0f);
+                GetOwner()->SetActorRotation(NewRotation);
         }
 
         else if (_leader)
         {
             FVector directionToLeader = _leader->GetActorLocation() - GetOwner()->GetActorLocation();
-            directionToLeader.Normalize();
+           // directionToLeader.Normalize();
 
             FRotator LookAtRotation = UKismetMathLibrary::FindLookAtRotation(GetOwner()->GetActorLocation(), GetOwner()->GetActorLocation() + directionToLeader);
-            FRotator CurrentRotation = _skeletalMeshComponent->GetComponentRotation();
+            FRotator CurrentRotation = GetOwner()->GetActorRotation();
             FRotator NewRotation = FMath::RInterpTo(CurrentRotation, LookAtRotation, DeltaTime, 2.0f);
-            _skeletalMeshComponent->SetWorldRotation(NewRotation);
+            GetOwner()->SetActorRotation(NewRotation);
 
-            FVector RelativePosition = GetOwner()->GetActorLocation();
-            RelativePosition += GetOwner()->GetActorForwardVector() * _rowDistance;
-            RelativePosition += GetOwner()->GetActorRightVector() * _rowSpacing;
-            RelativePosition += GetOwner()->GetActorUpVector() * _verticalSpacing;
+            FVector BirdPosition = GetOwner()->GetActorLocation();
+            BirdPosition += GetOwner()->GetActorForwardVector() * _rowDistance;
+            BirdPosition += GetOwner()->GetActorRightVector() * _rowSpacing;
+            BirdPosition += GetOwner()->GetActorUpVector() * _verticalSpacing;
 
             int32 Index = _flockMembers.Find(GetOwner());
-            RelativePosition += GetOwner()->GetActorRightVector() * (Index * 50.0f);
+            BirdPosition += GetOwner()->GetActorRightVector() * (Index * _flockOffset);
 
-            FVector NewLocation = FMath::VInterpTo(GetOwner()->GetActorLocation(), RelativePosition, DeltaTime, 5.0f);
+            FVector NewLocation = FMath::VInterpTo(GetOwner()->GetActorLocation(), BirdPosition, DeltaTime, _flockDelay);
             GetOwner()->SetActorLocation(NewLocation);
         }
     }
