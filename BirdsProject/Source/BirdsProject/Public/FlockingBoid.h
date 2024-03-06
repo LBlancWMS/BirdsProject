@@ -16,23 +16,16 @@ public:
     UFlockingBoid();
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
-        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers, float flockDelay, float flockOffset, USplineComponent* splineComponent);
+        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, TArray<AActor*> flockMembers, USplineComponent* splineComponent);
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
         void Flock(float deltaTime);
 
 private:
     bool _isFlocking;
-
     AActor* _leader;
     float _rowDistance;
     float _rowSpacing;
-    float _verticalSpacing;
-    float _flockDelay;
-    float _flockOffset;
-    float _splineInterpTime;
-    float _splineInterpSpeed;
-    float _randomRange;
 
     TArray<AActor*> _flockMembers;
     USplineComponent* _splineComponent;
