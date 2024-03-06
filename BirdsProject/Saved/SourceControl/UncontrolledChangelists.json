@@ -5,10 +5,13 @@
 			"guid": "00000000000000000000000000000000",
 			"description": "Default Uncontrolled Changelist",
 			"files": [
-				"C:/Users/Anais/Documents/Quetes/B2-Quete7/BirdsProject/BirdsProject/Content/Blueprints/PC_flyingBird.uasset",
-				"C:/Users/Anais/Documents/Quetes/B2-Quete7/BirdsProject/BirdsProject/Content/Blueprints/C_Bird.uasset",
-				"C:/Users/lucas/Documents/GitHub/BirdsProject/BirdsProject/Content/Blueprints/PC_flyingBird.uasset",
-				"C:/Users/lucas/Documents/GitHub/BirdsProject/BirdsProject/Content/Assets/Materials/WireframeMaterial.uasset"
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Blueprints/C_Bird.uasset",
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Blueprints/A_birdsSpline.uasset",
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Blueprints/GameState/GM_InGame.uasset",
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Blueprints/PC_flyingBird.uasset",
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Levels/TEST_Lucas.umap",
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Wild_West/Maps/WildWest.umap",
+				"D:/Gits/BirdsProject/BirdsProject/BirdsProject/Content/Blueprints/NewBlueprint.uasset"
 			]
 		}
 	]

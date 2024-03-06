@@ -1,4 +1,4 @@
-// Fill out your copyright notice in the Description page of Project Settings.
+// SCRIPT CONVERSION EULER / QUATERNION CONNU
 
 
 #include "QuaternionInput.h"
@@ -112,15 +112,6 @@ void UQuaternionInput::AddActorLocalRotationQuat(AActor* Actor, const FQuat& Del
 
 void UQuaternionInput::ClampRotation()
 {
-    //FRotator BirdRotation = GetOwner()->GetActorRotation();
-
-    //float Pitch = FMath::Clamp(BirdRotation.Pitch, -90, 90);
-    //float Roll = FMath::Clamp(BirdRotation.Roll, -90, 90);
-
-    //BirdRotation = FRotator(BirdRotation.Pitch, BirdRotation.Yaw, Roll);
-
-    //GetOwner()->SetActorRotation(BirdRotation);
-
     FQuat BirdRotationQuat = GetOwner()->GetActorQuat();
     FRotator BirdRotation = BirdRotationQuat.Rotator();
 

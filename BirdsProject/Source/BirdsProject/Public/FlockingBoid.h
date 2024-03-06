@@ -3,7 +3,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "GameFramework/Actor.h"
-#include "Components/SkeletalMeshComponent.h"
+#include "Components/SplineComponent.h"
 #include "GameFramework/FloatingPawnMovement.h"
 #include "FlockingBoid.generated.h"
 
@@ -16,10 +16,10 @@ public:
     UFlockingBoid();
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
-        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers, float flockDelay, float flockOffset);
+        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, float verticalSpacing, TArray<AActor*> flockMembers, float flockDelay, float flockOffset, USplineComponent* splineComponent);
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
-        void Flock(float DeltaTime);
+        void Flock(float deltaTime);
 
 private:
     bool _isFlocking;
@@ -30,7 +30,11 @@ private:
     float _verticalSpacing;
     float _flockDelay;
     float _flockOffset;
+    float _splineInterpTime;
+    float _splineInterpSpeed;
+    float _randomRange;
+
     TArray<AActor*> _flockMembers;
-    class USkeletalMeshComponent* _skeletalMeshComponent;
+    USplineComponent* _splineComponent;
     UFloatingPawnMovement* _movementComponent;
 };
