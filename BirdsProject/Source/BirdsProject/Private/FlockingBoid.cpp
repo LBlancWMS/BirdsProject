@@ -7,11 +7,15 @@ UFlockingBoid::UFlockingBoid()
     PrimaryComponentTick.bCanEverTick = false;
     _isFlocking = false;
     _leaderRotating = false;
+    _isPlayer = false;
+    _playerFollowLeader = false;
 }
 
-void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSpacing, TArray<AActor*> flockMembers, USplineComponent* splineComponent)
+void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSpacing, TArray<AActor*> flockMembers, USplineComponent* splineComponent, bool isPlayer, bool playerFollowLeader)
 {
     _leader = leader;
+    _isPlayer = isPlayer;
+    _playerFollowLeader = playerFollowLeader;
     _rowDistance = rowDistance;
     _rowSpacing = rowSpacing;
     _flockMembers = flockMembers;
@@ -23,15 +27,20 @@ void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSp
 
 void UFlockingBoid::AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float rotationSpeed, float rotationStopDistance)
 {
-    _targetLeaderQuat = targetQuat;
-    _leaderRotationSpeed = rotationSpeed;
-    _rotationStopDistance = rotationStopDistance;
-    _movementComponent->MaxSpeed *= 2.0f;
-    _leaderRotating = true;
+    //TODO : custom le multiplicateur de vitesse et donc changer le système d'animation / speed
+    if (_isFlocking)
+    {
+        _targetLeaderQuat = targetQuat;
+        _leaderRotationSpeed = rotationSpeed;
+        _rotationStopDistance = rotationStopDistance;
+        _movementComponent->MaxSpeed = 4800.0f;
+        _leaderRotating = true;
+    }
 }
 
 void UFlockingBoid::Flock(float deltaTime)
 {
+    // TODO : faire 2 fonctions au lieu d'une
     if (_isFlocking)
     {
         FVector MoveDirection = GetOwner()->GetActorForwardVector();
@@ -44,24 +53,25 @@ void UFlockingBoid::Flock(float deltaTime)
             GetOwner()->SetActorRotation(newRotation.Rotator());
             if (currentRotation.AngularDistance(_targetLeaderQuat) <= _rotationStopDistance)
             {
-                _movementComponent->MaxSpeed = _cachedMaxSpeed;
+                _movementComponent->MaxSpeed = 2400.0f;
                 _leaderRotating = false;
             }
         }
-        else if (_leader)
+        else if (!_isPlayer || _isPlayer && _playerFollowLeader)
         {
-            _movementComponent->MaxSpeed = _leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed;
-            FVector directionToLeader = (_leader->GetActorLocation() - GetOwner()->GetActorLocation()).GetSafeNormal();
-            FQuat LookAtRotation = FQuat::FindBetweenNormals(FVector::ForwardVector, directionToLeader);
-            FQuat CurrentRotation = FQuat(GetOwner()->GetActorRotation());
-            FQuat NewRotation = FQuat::Slerp(CurrentRotation, LookAtRotation, deltaTime * 2.0f);
-            float DistanceToLeader = FVector::Distance(GetOwner()->GetActorLocation(), _leader->GetActorLocation());
-            float OffsetFactor = FMath::Clamp(DistanceToLeader / _rowDistance, 0.0f, 1.0f);
-            FVector Offset = GetOwner()->GetActorRightVector() * (_rowSpacing * OffsetFactor);
-            FQuat OffsetRotation = FQuat::MakeFromEuler(Offset);
-            NewRotation = NewRotation * OffsetRotation;
+                //TODO : opti, remplacer les var locales par une struct et réduire le nombre de calculs si possible
+                _movementComponent->MaxSpeed = _leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed;
+                FVector directionToLeader = (_leader->GetActorLocation() - GetOwner()->GetActorLocation()).GetSafeNormal();
+                FQuat LookAtRotation = FQuat::FindBetweenNormals(FVector::ForwardVector, directionToLeader);
+                FQuat CurrentRotation = FQuat(GetOwner()->GetActorRotation());
+                FQuat NewRotation = FQuat::Slerp(CurrentRotation, LookAtRotation, deltaTime * 2.0f);
+                float DistanceToLeader = FVector::Distance(GetOwner()->GetActorLocation(), _leader->GetActorLocation());
+                float OffsetFactor = FMath::Clamp(DistanceToLeader / _rowDistance, 0.0f, 1.0f);
+                FVector Offset = GetOwner()->GetActorRightVector() * (_rowSpacing * OffsetFactor);
+                FQuat OffsetRotation = FQuat::MakeFromEuler(Offset);
+                NewRotation = NewRotation * OffsetRotation;
 
-            GetOwner()->SetActorRotation(NewRotation.Rotator());
+                GetOwner()->SetActorRotation(NewRotation.Rotator());
         }
     }
 }

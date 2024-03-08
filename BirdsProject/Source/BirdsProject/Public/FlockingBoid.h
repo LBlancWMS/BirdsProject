@@ -16,7 +16,7 @@ public:
     UFlockingBoid();
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
-        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, TArray<AActor*> flockMembers, USplineComponent* splineComponent);
+        void StartFlocking(AActor* leader, float rowDistance, float rowSpacing, TArray<AActor*> flockMembers, USplineComponent* splineComponent, bool isPlayer, bool playerFollowLeader);
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
         void Flock(float deltaTime);
@@ -26,6 +26,8 @@ public:
 private:
     bool _isFlocking;
     bool _leaderRotating;
+    bool _isPlayer;
+    bool _playerFollowLeader;
     AActor* _leader;
     float _rowDistance;
     float _rowSpacing;
