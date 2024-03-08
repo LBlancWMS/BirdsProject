@@ -1,10 +1,12 @@
 #include "FlockingBoid.h"
 #include "Kismet/KismetMathLibrary.h"
 
+
 UFlockingBoid::UFlockingBoid()
 {
     PrimaryComponentTick.bCanEverTick = false;
     _isFlocking = false;
+    _leaderRotating = false;
 }
 
 void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSpacing, TArray<AActor*> flockMembers, USplineComponent* splineComponent)
@@ -15,7 +17,17 @@ void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSp
     _flockMembers = flockMembers;
     _splineComponent = splineComponent;
     _movementComponent = GetOwner()->FindComponentByClass<UFloatingPawnMovement>();
+    _cachedMaxSpeed = _movementComponent->MaxSpeed;
     _isFlocking = true;
+}
+
+void UFlockingBoid::AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float rotationSpeed, float rotationStopDistance)
+{
+    _targetLeaderQuat = targetQuat;
+    _leaderRotationSpeed = rotationSpeed;
+    _rotationStopDistance = rotationStopDistance;
+    _movementComponent->MaxSpeed *= 2.0f;
+    _leaderRotating = true;
 }
 
 void UFlockingBoid::Flock(float deltaTime)
@@ -25,16 +37,20 @@ void UFlockingBoid::Flock(float deltaTime)
         FVector MoveDirection = GetOwner()->GetActorForwardVector();
         _movementComponent->AddInputVector(MoveDirection * _movementComponent->MaxSpeed);
 
-        if (GetOwner() == _leader)
+        if (GetOwner() == _leader && _leaderRotating)
         {
             FQuat currentRotation = FQuat(GetOwner()->GetActorRotation());
-            FRotator randomRotationAngles(FMath::FRandRange(-90.0f, 90.0f), 0.0f, 0.0f);
-            FQuat randomRotation = FQuat(randomRotationAngles);
-            FQuat newRotation = FQuat::Slerp(currentRotation, currentRotation * randomRotation, FMath::Clamp(deltaTime * 2.0f, 0.0f, 1.0f));
+            FQuat newRotation = FQuat::Slerp(currentRotation, currentRotation * _targetLeaderQuat, deltaTime * _leaderRotationSpeed);
             GetOwner()->SetActorRotation(newRotation.Rotator());
+            if (currentRotation.AngularDistance(_targetLeaderQuat) <= _rotationStopDistance)
+            {
+                _movementComponent->MaxSpeed = _cachedMaxSpeed;
+                _leaderRotating = false;
+            }
         }
         else if (_leader)
         {
+            _movementComponent->MaxSpeed = _leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed;
             FVector directionToLeader = (_leader->GetActorLocation() - GetOwner()->GetActorLocation()).GetSafeNormal();
             FQuat LookAtRotation = FQuat::FindBetweenNormals(FVector::ForwardVector, directionToLeader);
             FQuat CurrentRotation = FQuat(GetOwner()->GetActorRotation());

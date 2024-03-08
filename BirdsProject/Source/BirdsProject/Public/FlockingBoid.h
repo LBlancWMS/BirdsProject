@@ -20,12 +20,19 @@ public:
 
     UFUNCTION(BlueprintCallable, Category = "Flocking")
         void Flock(float deltaTime);
+    UFUNCTION(BlueprintCallable, Category = "Flocking")
+        void AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float rotationSpeed, float rotationStopDistance);
 
 private:
     bool _isFlocking;
+    bool _leaderRotating;
     AActor* _leader;
     float _rowDistance;
     float _rowSpacing;
+    float _leaderRotationSpeed;
+    float _rotationStopDistance;
+    float _cachedMaxSpeed;
+    FQuat _targetLeaderQuat;
 
     TArray<AActor*> _flockMembers;
     USplineComponent* _splineComponent;
