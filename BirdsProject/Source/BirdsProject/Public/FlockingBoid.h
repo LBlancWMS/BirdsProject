@@ -22,6 +22,9 @@ public:
         void Flock(float deltaTime);
     UFUNCTION(BlueprintCallable, Category = "Flocking")
         void AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float rotationSpeed, float rotationStopDistance);
+    UFUNCTION(BlueprintCallable, Category = "Flocking")
+        void ChangePlayerSpeed();
+
 
 private:
     bool _isFlocking;
