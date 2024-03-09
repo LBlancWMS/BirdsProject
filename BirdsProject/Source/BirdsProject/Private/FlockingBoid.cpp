@@ -38,6 +38,45 @@ void UFlockingBoid::AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float ro
     }
 }
 
+void UFlockingBoid::ChangePlayerSpeed()
+{
+    if (_isPlayer)
+    {
+        FVector MoveDirection = GetOwner()->GetActorForwardVector();
+        FQuat playerQuat = GetOwner()->GetActorQuat();
+        FQuat leaderQuat = _leader->GetActorQuat();
+
+        float degAngleDist = FMath::RadiansToDegrees(playerQuat.AngularDistance(leaderQuat));
+
+        if (GEngine)
+            GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::Printf(TEXT("Angular distance: %f"), degAngleDist));
+
+
+        if (degAngleDist > 20.0f)
+        {
+            if (GEngine)
+                GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, "Player angle not equal to leader's angle");
+            _movementComponent->MaxSpeed -= 10.0f;
+
+            if (_movementComponent->MaxSpeed <= 0)
+            {
+                _movementComponent->MaxSpeed = 0;
+            }
+
+            if (GEngine)
+                GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, FString::Printf(TEXT("Player maxspeed: %f"), GetOwner()->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed));
+        }
+        else
+        {
+            _movementComponent->MaxSpeed += 10.0f;
+            if (_movementComponent->MaxSpeed > _cachedMaxSpeed)
+            {
+                _movementComponent->MaxSpeed = _cachedMaxSpeed;
+            }
+        }
+    }
+}
+
 void UFlockingBoid::Flock(float deltaTime)
 {
     // TODO : faire 2 fonctions au lieu d'une
@@ -60,18 +99,21 @@ void UFlockingBoid::Flock(float deltaTime)
         else if (!_isPlayer || _isPlayer && _playerFollowLeader)
         {
                 //TODO : opti, remplacer les var locales par une struct et réduire le nombre de calculs si possible
+            if (!_isPlayer)
+            {
                 _movementComponent->MaxSpeed = _leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed;
-                FVector directionToLeader = (_leader->GetActorLocation() - GetOwner()->GetActorLocation()).GetSafeNormal();
-                FQuat LookAtRotation = FQuat::FindBetweenNormals(FVector::ForwardVector, directionToLeader);
-                FQuat CurrentRotation = FQuat(GetOwner()->GetActorRotation());
-                FQuat NewRotation = FQuat::Slerp(CurrentRotation, LookAtRotation, deltaTime * 2.0f);
-                float DistanceToLeader = FVector::Distance(GetOwner()->GetActorLocation(), _leader->GetActorLocation());
-                float OffsetFactor = FMath::Clamp(DistanceToLeader / _rowDistance, 0.0f, 1.0f);
-                FVector Offset = GetOwner()->GetActorRightVector() * (_rowSpacing * OffsetFactor);
-                FQuat OffsetRotation = FQuat::MakeFromEuler(Offset);
-                NewRotation = NewRotation * OffsetRotation;
+            }
+            FVector directionToLeader = (_leader->GetActorLocation() - GetOwner()->GetActorLocation()).GetSafeNormal();
+            FQuat LookAtRotation = FQuat::FindBetweenNormals(FVector::ForwardVector, directionToLeader);
+            FQuat CurrentRotation = FQuat(GetOwner()->GetActorRotation());
+            FQuat NewRotation = FQuat::Slerp(CurrentRotation, LookAtRotation, deltaTime * 2.0f);
+            float DistanceToLeader = FVector::Distance(GetOwner()->GetActorLocation(), _leader->GetActorLocation());
+            float OffsetFactor = FMath::Clamp(DistanceToLeader / _rowDistance, 0.0f, 1.0f);
+            FVector Offset = GetOwner()->GetActorRightVector() * (_rowSpacing * OffsetFactor);
+            FQuat OffsetRotation = FQuat::MakeFromEuler(Offset);
+            NewRotation = NewRotation * OffsetRotation;
 
-                GetOwner()->SetActorRotation(NewRotation.Rotator());
+            GetOwner()->SetActorRotation(NewRotation.Rotator());
         }
     }
 }
