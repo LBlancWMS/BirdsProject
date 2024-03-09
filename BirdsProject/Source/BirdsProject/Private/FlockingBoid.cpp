@@ -27,7 +27,6 @@ void UFlockingBoid::StartFlocking(AActor* leader, float rowDistance, float rowSp
 
 void UFlockingBoid::AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float rotationSpeed, float rotationStopDistance)
 {
-    //TODO : custom le multiplicateur de vitesse et donc changer le système d'animation / speed
     if (_isFlocking)
     {
         _targetLeaderQuat = targetQuat;
@@ -40,46 +39,22 @@ void UFlockingBoid::AddSmoothLeaderRotationQuaternion(FQuat targetQuat, float ro
 
 void UFlockingBoid::ChangePlayerSpeed()
 {
-    if (_isPlayer)
-    {
-        FVector MoveDirection = GetOwner()->GetActorForwardVector();
-        FQuat playerQuat = GetOwner()->GetActorQuat();
-        FQuat leaderQuat = _leader->GetActorQuat();
+        FVector PlayerDirection = GetOwner()->GetActorForwardVector();
+        FVector LeaderDirection = (_leader->GetActorLocation() - GetOwner()->GetActorLocation()).GetSafeNormal();
 
-        float degAngleDist = FMath::RadiansToDegrees(playerQuat.AngularDistance(leaderQuat));
+        float AlignmentFactor = FVector::DotProduct(PlayerDirection, LeaderDirection);
+        GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::Printf(TEXT("Alignment factor: %f"), AlignmentFactor));
 
-        if (GEngine)
-            GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Red, FString::Printf(TEXT("Angular distance: %f"), degAngleDist));
-
-
-        if (degAngleDist > 20.0f)
-        {
-            if (GEngine)
-                GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, "Player angle not equal to leader's angle");
-            _movementComponent->MaxSpeed -= 10.0f;
-
-            if (_movementComponent->MaxSpeed <= 0)
-            {
-                _movementComponent->MaxSpeed = 0;
-            }
-
-            if (GEngine)
-                GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, FString::Printf(TEXT("Player maxspeed: %f"), GetOwner()->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed));
-        }
-        else
-        {
-            _movementComponent->MaxSpeed += 10.0f;
-            if (_movementComponent->MaxSpeed > _cachedMaxSpeed)
-            {
-                _movementComponent->MaxSpeed = _cachedMaxSpeed;
-            }
-        }
-    }
+        float speedChangeRate = 20.0f;
+        _movementComponent->MaxSpeed = FMath::FInterpTo(_movementComponent->MaxSpeed, _leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed * (AlignmentFactor - 0.075f), GetWorld()->GetDeltaSeconds(), speedChangeRate);
+        _movementComponent->MaxSpeed = FMath::Clamp(_movementComponent->MaxSpeed, 0.0f,_leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed);
+        GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, FString::Printf(TEXT("Player maxspeed: %f"), _movementComponent->MaxSpeed));
 }
+
+
 
 void UFlockingBoid::Flock(float deltaTime)
 {
-    // TODO : faire 2 fonctions au lieu d'une
     if (_isFlocking)
     {
         FVector MoveDirection = GetOwner()->GetActorForwardVector();
@@ -98,7 +73,6 @@ void UFlockingBoid::Flock(float deltaTime)
         }
         else if (!_isPlayer || _isPlayer && _playerFollowLeader)
         {
-                //TODO : opti, remplacer les var locales par une struct et réduire le nombre de calculs si possible
             if (!_isPlayer)
             {
                 _movementComponent->MaxSpeed = _leader->FindComponentByClass<UFloatingPawnMovement>()->MaxSpeed;
