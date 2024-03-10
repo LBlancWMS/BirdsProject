@@ -51,8 +51,6 @@ void UFlockingBoid::ChangePlayerSpeed()
         GEngine->AddOnScreenDebugMessage(-1, 0, FColor::Green, FString::Printf(TEXT("Player maxspeed: %f"), _movementComponent->MaxSpeed));
 }
 
-
-
 void UFlockingBoid::Flock(float deltaTime)
 {
     if (_isFlocking)
